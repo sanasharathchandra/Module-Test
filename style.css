@@ -1,7 +1,7 @@
-/* **************** Google Fonts ****************= */
+/* ========== Google Fonts =========== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-/* **************** CSS Variables ****************= */
+/* ========== CSS Variables =========== */
 :root {
   --primary-color: #f94a3d;
   --yellow-color: #ffcf03;
@@ -72,7 +72,7 @@ img {
   height: auto;
 }
 
-/* **************** Custom Classes ****************= */
+/* ========== Custom Classes =========== */
 .container {
   max-width: 120rem;
   padding: 0 3rem;
@@ -90,7 +90,7 @@ img {
   align-items: center;
 }
 
-/* **************** Header ****************= */
+/* ========== Header =========== */
 .header {
   min-height: 100vh;
   background: linear-gradient(
@@ -263,10 +263,9 @@ img {
   }
 }
 
-/* **************** Home ****************= */
+/* ========== Home =========== */
 .header .home {
   height: calc(100vh - 8.5rem);
-  background-color: rgba(249, 74, 61, 0.07);
 
   .row {
     display: grid;
@@ -390,7 +389,113 @@ img {
   }
 }
 
-/* **************** Services ****************= */
+/* ========== SignIn Form =========== */
+.header .wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10000;
+  transition: 0.5s;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  form {
+    background-color: var(--white-color);
+    border: 1px solid var(--grey-color);
+    max-width: 50rem;
+    width: 100%;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    margin: 2rem;
+
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-top: 2rem;
+    }
+
+    .control {
+      margin-bottom: 2rem;
+    }
+
+    label {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    input {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.8rem;
+      display: block;
+      border: 1px solid var(--grey-color);
+      padding: 1.3rem 0;
+      text-indent: 1rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    .checkbox {
+      margin-bottom: 2rem;
+      input {
+        width: auto;
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 1.3rem 0;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    .links {
+      margin-top: 2rem;
+      span {
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+
+        a {
+          color: var(--primary-color);
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .close-form {
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+    color: var(--default-color);
+    font-size: 4rem;
+    cursor: pointer;
+  }
+}
+
+/* ========== Services =========== */
 .services {
   padding: 10rem 0 10rem;
 
@@ -448,7 +553,7 @@ img {
   }
 }
 
-/* **************** about ****************= */
+/* ========== about =========== */
 .about {
   background-color: var(--grey-color-1);
   padding: 10rem 0 10rem;
@@ -542,7 +647,7 @@ img {
   }
 }
 
-/* **************** Recipes ****************= */
+/* ========== Recipes =========== */
 * Special Recepies Section  */
 #Special-Recipes {
     margin-top: 50px;
@@ -642,7 +747,7 @@ img {
     text-align: center;
 }
 
-/* **************** Testimonials ****************= */
+/* ========== Testimonials =========== */
 .testimonials {
   padding: 10rem 0 10rem;
   background-color: var(--grey-color-1);
@@ -816,7 +921,7 @@ img {
   }
 }
 
-/* **************** App ****************= */
+/* ========== App =========== */
 .app {
   padding: 10rem 0 20rem;
 }
@@ -844,10 +949,10 @@ img {
 
       img {
         position: absolute;
-        top: 100%;
+        top: 80%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 50rem;
+        width: 40rem;
       }
     }
   }
@@ -928,10 +1033,13 @@ img {
   }
 }
 
-/* **************** Footer ****************= */
+/* ========== Footer =========== */
 .footer {
-  
-  background: linear-gradient(285deg, #FDF0F3 4%, rgba(255, 253, 242, 0.50) 45%, #FDEEF3 86%);
+  background: linear-gradient(
+    145deg,
+    rgba(#f94a3d, 10%) 60%,
+    rgba(#ffe507, 10%)
+  );
   padding: 10rem 3rem 10rem;
 
   .row {
@@ -991,6 +1099,17 @@ img {
   }
 }
 
+.footer-bottom {
+  background-color: var(--primary-color);
+  padding: 1.5rem 0;
+
+  .row {
+    justify-content: space-between;
+    p {
+      color: var(--white-color);
+    }
+  }
+}
 
 @media (max-width: 768px) {
   .footer {
